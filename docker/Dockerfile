@@ -1,5 +1,5 @@
 # cat Dockerfile | oc new-build -D - --name=certbot
-FROM registry.access.redhat.com/rhel7:7.8-265
+FROM registry.access.redhat.com/rhel7:7.9-189
 
 RUN set -x && \
     yum repolist all && \
