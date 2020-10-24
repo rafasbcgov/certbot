@@ -2,6 +2,7 @@
 FROM registry.access.redhat.com/rhel7:7.8-265
 
 RUN set -x && \
+    subscription-manager attach --auto && \
     yum update && \
     yum repolist all && \
     yum install -y '--setopt=skip_missing_names_on_install=False' '--setopt=skip_missing_names_on_update=False' https://mirror.csclub.uwaterloo.ca/fedora/epel/epel-release-latest-7.noarch.rpm && \
